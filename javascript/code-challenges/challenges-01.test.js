@@ -64,7 +64,8 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
-    word=word.toUpperCase()+"!";
+    word=word.toUpperCase();
+    word=word+"!";
     return word;
     };
 
@@ -72,7 +73,6 @@ const speaker = (words, callback) => {
   // Solution code here...
   let array=[];
   words.forEach(word => {
-    greeting(word);
     callback(word);
     array.push(word);
   });
@@ -99,9 +99,8 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  let array=[];
   arr.forEach(value => {
-    array.push(value);
+    arr.push(value);
   });
 };
 
@@ -135,18 +134,13 @@ If the item is available, add it to your list. Return the final list.
 
 const createList = (availableItems) => {
   // Solution code here...
-  // let availableItems=[ { name: 'apples', available: true },{ name: 'pears', available: true },
-  // { name: 'oranges', available: false },
-  // { name: 'bananas', available: true },
-  // { name: 'blueberries', available: false }];
-
-//   let array=[];
-//   arr.forEach(element => {
-//    if(availableItems[element].available===true){
-// array.push(availableItems[element]);
-//    }
-// return array;
-//   });
+    let array=[];
+  arr.forEach(element => {
+   if(inventory[element].available === true){
+array.push(inventory[element]);
+   }
+return array;
+  });
  
 };
 
