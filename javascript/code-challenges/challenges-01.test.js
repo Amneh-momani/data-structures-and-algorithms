@@ -64,19 +64,22 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
-    word=word.toUpperCase();
-    word=word+"!";
-    return word;
+   let array=[];
+  word.forEach(element => {
+    element=(element.toUpperCase())+`!`;
+    array.push(element);
+  });
+  return array;
     };
 
 const speaker = (words, callback) => {
   // Solution code here...
   let array=[];
+  words=greeting(words);
   words.forEach(word => {
-    callback(word);
     array.push(word);
   });
-  return array;
+  return array;  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,18 +102,19 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  arr.forEach(value => {
     arr.push(value);
-  });
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  array.slice(times).forEach(element => {
-  callback(num);
-    arr.push(num);
-  });
-  return array;
+  let arr1=[];
+  for (times;times>0;times--){
+
+    arr1=addValues(arr,num);
+    console.log(arr1);
+    arr.push(arr1);
+  }
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -135,9 +139,9 @@ If the item is available, add it to your list. Return the final list.
 const createList = (availableItems) => {
   // Solution code here...
     let array=[];
-  arr.forEach(element => {
-   if(inventory[element].available === true){
-array.push(inventory[element]);
+    availableItems.forEach(element => {
+   if(availableItems.available === true){
+array.push(element.name);
    }
 return array;
   });
