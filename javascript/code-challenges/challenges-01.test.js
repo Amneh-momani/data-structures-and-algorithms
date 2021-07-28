@@ -107,13 +107,13 @@ const addValues = (arr, value) => {
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  let arr1=[];
-  for (times;times>0;times--){
+  let array=[];
+  for (times ; times>0 ; times--){
 
-    arr1=addValues(arr,num);
-    console.log(arr1);
-    arr.push(arr1);
+    array=addValues(arr,num);
   }
+ return arr;
+
 
 };
 
@@ -138,13 +138,13 @@ If the item is available, add it to your list. Return the final list.
 
 const createList = (availableItems) => {
   // Solution code here...
-    let array=[];
-    availableItems.forEach(element => {
-   if(availableItems.available === true){
+  let array=[];
+ availableItems.forEach(element => {
+   if(element.available === true && array.indexOf(element.name) === -1){
 array.push(element.name);
    }
+ })
 return array;
-  });
  
 };
 
