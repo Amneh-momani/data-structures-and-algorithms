@@ -26,6 +26,12 @@ const updateAnimal = (arr, callback) => {
   // Solution code here...
   let array=[];
 
+  arr.forEach(Element=>{
+   Element=callback(Element);
+   array.push(Element);
+    
+  });
+  return array;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,8 +115,9 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  arr.sort( function ( a, b ) { return b.price - a.price; } );
-  return arr;
+  return arr.sort((a, b) => {
+    return a.price - b.price;
+});
 };
 
 /* ------------------------------------------------------------------------------------------------
