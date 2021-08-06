@@ -44,6 +44,11 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  if (Object.values(obj).indexOf(value) > -1) {
+    return true;}
+    else{
+      return false;
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +72,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-  return  Object.entries(obj);
+  return  (Object.entries(obj));
 
 };
 
