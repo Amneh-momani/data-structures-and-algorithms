@@ -6,6 +6,7 @@ CHALLENGE 1 - Review
 Write a function named screenForNames that takes in an array of strings and uses Regex to 
 create a new array of only those strings that match the following rules:
 
+
 * the name must begin with Mr., Mrs., Ms., Dr. followed by a space
 * the name must contain only letter characters (white spaces are ok)
 
@@ -18,13 +19,14 @@ const screenForNames = (arr) => {
       return Element;
     }
   });
-}
+  });
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
 Write a function named toTitleCase that takes in an array of strings and returns an array of 
 strings with the first character in upper case and the rest as is.
+
 
 For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyver'].
 ------------------------------------------------------------------------------------------------ */
@@ -39,8 +41,8 @@ const toTitleCase = (arr) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function named biggerThanLuke that, given the Star Wars data, below, returns the names 
-of the characters whose mass is greater than Luke's.
+
+Write a function named biggerThanLuke that, given the Star Wars data, below, returns the names of the characters whose mass is greater than Luke's.
 
 The names should be combined into a single string with each character name separated by a dash.
 
@@ -115,12 +117,13 @@ let biggerThanLuke = (arr) => {
       return Element.name;
     }
   }).join('-');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
-Write a function named sortBy that takes in an array of objects, each of which has a particular 
-property, and sorts those objects by that property, lowest to highest, returning the same array.
+
+Write a function named sortBy that takes in an array of objects, each of which has a particular property, and sorts those objects by that property, lowest to highest, returning the same array.
 
 Here is an example of the input:
 [
@@ -167,7 +170,6 @@ This function should return either true or false to indicate if someone won the 
 
 Instead of trying to write crazy for loops to automate checking the rows, columns and diagonals consider
  writing one helper function that accepts three coordinate pairs and checks the values of the array at those
-  locations. For instance helpCheck(row1, col1, row2, col2, row3, col3).
 
 Your function does not need to work for boards of any size other than 3x3.
 
